@@ -20,7 +20,7 @@ img {
 
 .grid {
     display: grid;
-    grid-auto-columns: 1em auto 1em;
+    grid-auto-columns: 1em 1fr 1em;
     grid-template-rows: 60vw;
     grid-template-areas: 
         "header header header"
@@ -34,12 +34,13 @@ img {
 
 @media (min-width: 500px) {
     .grid {
-        grid-auto-columns: 1em auto auto 1em;
+        grid-auto-columns: 1em 1fr 1fr 1em;
         grid-template-areas: 
             "header header header header"
             "..... article1 article2 ....."
             "..... article3 article4 ....."
             ;
+        grid-gap: 1.5em;
     }
 
     h1 {
@@ -49,12 +50,13 @@ img {
 
 @media (min-width: 1000px) {
     .grid {
-        grid-auto-columns: 1em auto auto auto auto 1em;
-        grid-template-rows: 45vw;
+        grid-auto-columns: 1em 1fr 1fr 1fr 1fr 1em;
+        grid-template-rows: 55vw;
         grid-template-areas: 
             "  header header header header header header  "
             ".... article1 article2 article3 article4 ...."
             ;
+        grid-gap: 2em;
     }
 
     h1 {
